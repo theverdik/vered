@@ -12,7 +12,7 @@ CFLAGS +=
 CFLAGS_DEB = -O0 -g -gdwarf-4
 CFLAGS_REL = -O3
 
-LDFLAGS =
+LDFLAGS = -lncurses
 
 rwildcard = $(foreach d, $(wildcard $1*), $(call rwildcard, $d/, $2) $(filter $(subst *, %, $2), $d))
 
